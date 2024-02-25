@@ -1,49 +1,55 @@
+/* Allmänna stilmallar */
 html {
     font-size: 16px;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.2;
     margin: auto;
-    
 }
 
-/* its the green meny button */
+/* Grön menyknapp */
 .dropbtn {
     background-color: #04AA6D;
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
-  }
-  
+}
 
-  .menu {
+/* Huvudmenyn */
+.menu {
     position: relative;
-    display:inline-block;
-  }
-  
-  .menu-content {
+    display: inline-block;
+}
+
+.menu-content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-  }
-  
-  .menu-content a {
+}
+
+.menu-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-  }
-  
-  .menu-content a:hover {background-color: #ddd;}
-  
-  .menu:hover .menu-content {display: block;}
-  
-  .menu:hover .dropbtn {background-color: #3e8e41;}
-  
+}
 
+.menu-content a:hover {
+    background-color: #ddd;
+}
+
+.menu:hover .menu-content {
+    display: block;
+}
+
+.menu:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/* Container och flexbox */
 .container {
     width: 80%;
     margin: 0 auto;
@@ -63,63 +69,73 @@ html {
     border: 1px solid #999;
 }
 
-
-main{
+/* Main sektion */
+main {
     position: relative;
     width: 100%;
-    padding-left:20px; 
-    padding-right:20px;
-    height: auto;  
-    box-sizing:border-box;
+    padding: 20px;
+    box-sizing: border-box;
     max-width: 800px;
-    max-height: 100px;
     margin: auto;
-    padding-bottom: 200px;    
+    padding-bottom: 200px;
     flex-grow: 1;
-
 }
 
-header{
-    border-color: black;
-    border-top-style: solid;
-    border-top-width: 5px;
-    border-right-width: 10px;
-    border-right-style: solid;
-    border-bottom-width: 15px;
-    border-bottom-style: solid;
-    border-left-width: 20px;
-    border-left-style: solid;
+/* Media queries för navigering */
+@media only screen and (min-width: 601px) {
+    nav {
+        display: inline-block;
+    }
+    nav a {
+        display: inline-block;
+        margin-right: 10px;
+    }
 }
 
-nav li{
+@media only screen and (max-width: 600px) {
+    nav {
+        display: block;
+    }
+    nav a {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+/* Header och navigeringsstilar */
+header {
+    border: 5px solid black;
+    border-radius: 20px;
+    background-color: #088076;
+    color: #abc4bc;
+    padding: 10px 20px;
+}
+
+nav li {
     display: inline;
     text-decoration: none;
     padding: 0.6rem;
     background-color: #088076;
     color: #abc4bc;
-
 }
 
-.navbox{
-    border-color: black;
-    border-radius: 2px;
-}
-
+/* Klass för zoom-effekt */
 .click-zoom input[type=checkbox] {
-    display: none
-  }
-  
-  .click-zoom img {
+    display: none;
+}
+
+.click-zoom img {
     margin: 15px;
     transition: transform 0.25s ease;
-    cursor: zoom-in
-  }
-  
-  .click-zoom input[type=checkbox]:checked~img {
-    transform: scale(3);
-    cursor: zoom-out
-  } 
+    cursor: zoom-in;
+}
 
+.click-zoom input[type=checkbox]:checked ~ img {
+    transform: scale(3);
+    cursor: zoom-out;
+}
+
+/* Grundläggande layoutstilar för body */
 body {
     max-width: 800px;
     margin: auto;
@@ -129,38 +145,27 @@ body {
     flex-direction: column;
 }
 
+/* Klass för listor */
 li {
     list-style-type: none;
 }
 
-/* page one */
-
+/* Sidornas bakgrundsfärger */
 .body1 {
-    background-color:rgb(157, 175, 175) ;
+    background-color: rgb(157, 175, 175);
 }
-
-/* page two */
 
 .body2 {
     background-color: rgba(99, 84, 84, 0.605);
 }
 
-#Global{
-    width: 300px;
-}
-
-#Courtesy{
-    width: 300px;
-    
-}
-#Lokal{
-    width: 300px;
-}
-
-/* page three */
-
 .body3 {
     background-color: thistle;
 }
 
-
+/* Stilar för specifika ID-element */
+#Global,
+#Courtesy,
+#Lokal {
+    width: 300px;
+}
