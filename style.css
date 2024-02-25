@@ -104,11 +104,21 @@ main {
 
 /* Header och navigeringsstilar */
 header {
+    position: relative;
     border: 5px solid black;
     border-radius: 20px;
     background-color: #088076;
     color: #abc4bc;
     padding: 10px 20px;
+}
+
+
+#målgrupp {
+    width: 200px;
+    height: 120px;
+    float: inline-end;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 nav li {
@@ -118,6 +128,26 @@ nav li {
     background-color: #088076;
     color: #abc4bc;
 }
+
+/* cute box */
+.cute-box {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px; 
+    background-color: #7a64db; 
+    color: #fff; 
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #ff69b4;
+    transition: transform 0.2s ease; 
+}
+
+.cute-box:hover {
+    transform: scale(1.05); 
+    background-color: #ff69b4; 
+    border-color: #7a64db; 
+}
+
 
 /* Klass för zoom-effekt */
 .click-zoom input[type=checkbox] {
