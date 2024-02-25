@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout</title>
     <link rel="stylesheet" href="style.css">
 </head>
-  <body class="body1">
+
+<body class="body1">
     <main>
         <header>
             <h1>Layout</h1>
             <nav>
-                <ul>
+                <ul class="Navbox">
                     <li><a href="index.html">Del A</a></li>
                     <li><a href="Fråga2.html">Del B</a></li>
                     <li><a href="Fråga3.html">Del C</a></li>
                 </ul>
             </nav>
         </header>
-        <h3>Fråga 1</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quod officiis possimus a ad repudiandae voluptatem mollitia obcaecati suscipit dolorem ut aliquam id laborum magni, nostrum aperiam, accusamus magnam incidunt.</p>
-        <h3>fråga 2</h3>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat eos, consequatur amet ad aut sint eaque illo praesentium laborum delectus commodi voluptatum dolores, similique, quae porro laudantium excepturi aperiam neque?</p>
+        <h3>Förklara vad CSS-egenskaperna justify-content respektive align-items har för effekt när man använder flexbox för layout.</h3>
+        <p>
+            <b>Justify-content</b> bestämmer placeringen av flex-element längs huvudaxeln i en flexcontainer. Värdena som styr placeringen är <b>’flex-start’ ’flex-end’ ’center’ ’space-between’</b> och <b> ’space-around’</b>.
+        </p>
+        <p>
+            <b>Align-items</b> styr justeringen av flex-element längs den vertikala axeln med hjälp av dessa värden, <b>’flex-start’ ’flex-end’ ’center’ ’baseline’ ’stretch’.</b>
+        </p>
+        <h3>Vad är en media query och vad används den till?</h3>
+        <p><b>Media query</b> är ett verktyg för att göra responsiva webbsidor som ändrar layout och design baserat på vad för egenskaper enheten du använder för att se webbsidan. </p>
+        <div class="container">
+            <div class="flex-container">
+                <div class="item">test 1</div>
+                <div class="item">test 2</div>
+                <div class="item">test 3</div>
+            </div>
+        </div>
     </main>
+   
 </body>
+
 </html>
