@@ -6,6 +6,49 @@ html {
     
 }
 
+/* its the green meny button */
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+
+  .menu {
+    position: relative;
+    display:inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .menu-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .menu-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .menu-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .menu:hover .menu-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .menu:hover .dropbtn {background-color: #3e8e41;}
+  
+
 .container {
     width: 80%;
     margin: 0 auto;
@@ -33,7 +76,12 @@ main{
     padding-right:20px;
     height: auto;  
     box-sizing:border-box;
+    max-width: 800px;
+    max-height: 100px;
+    margin: auto;
     padding-bottom: 200px;    
+    flex-grow: 1;
+
 }
 
 header{
@@ -81,6 +129,9 @@ body {
     max-width: 800px;
     margin: auto;
     border-bottom: 80px;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
 }
 
 li {
@@ -118,8 +169,3 @@ li {
 }
 
 
-main {
-    max-width: 800px;
-    max-height: 100px;
-    margin: auto;
-}
