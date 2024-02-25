@@ -21,7 +21,6 @@ html {
     display:inline-block;
   }
   
-  /* Dropdown Content (Hidden by Default) */
   .menu-content {
     display: none;
     position: absolute;
@@ -31,7 +30,6 @@ html {
     z-index: 1;
   }
   
-  /* Links inside the dropdown */
   .menu-content a {
     color: black;
     padding: 12px 16px;
@@ -39,13 +37,10 @@ html {
     display: block;
   }
   
-  /* Change color of dropdown links on hover */
   .menu-content a:hover {background-color: #ddd;}
   
-  /* Show the dropdown menu on hover */
   .menu:hover .menu-content {display: block;}
   
-  /* Change the background color of the dropdown button when the dropdown content is shown */
   .menu:hover .dropbtn {background-color: #3e8e41;}
   
 
