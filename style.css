@@ -6,19 +6,43 @@ html {
     margin: auto;
 }
 
-/* Grön menyknapp */
-.dropbtn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border:none;
-    border-radius: 10px;
+body {
+    max-width: 800px;
+    margin: auto;
+    border-bottom: 80px;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sidornas bakgrundsfärger */
+.body1 {
+    background-color: rgb(157, 175, 175);
+    
+}
+
+.body2 {
+    background-color: rgba(99, 84, 84, 0.605);
+}
+
+.body3 {
+    background-color: thistle;
+}
+
+/* Header och navigeringsstilar */
+header {
+    position: relative;
+    border: 5px solid black;
+    border-radius: 20px;
+    background-color: #088076;
+    color:black;
+    padding: 10px 20px;
 }
 
 .menu {
     position: relative;
     display: inline-block;
+    float: right;
 }
 
 .menu-content {
@@ -49,24 +73,36 @@ html {
     background-color: #3e8e41;
 }
 
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+}
+
 /* Container och flexbox */
 .container {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
-}
-
-.flex-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
 }
 
 .item {
     background-color: #f0f0f0;
     padding: 10px;
     border: 1px solid #999;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Main sektion */
@@ -79,75 +115,15 @@ main {
     margin: auto;
     padding-bottom: 200px;
     flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
 }
 
-/* Media queries för navigering */
-@media only screen and (min-width: 601px) {
-    nav {
-        display: inline-block;
-    }
-    nav a {
-        display: inline-block;
-        margin-right: 10px;
-    }
+section {
+    background-color: #c9aeae;
+    padding: 20px;
 }
-
-@media only screen and (max-width: 600px) {
-    nav {
-        display: block;
-    }
-    nav a {
-        display: block;
-        margin-bottom: 5px;
-    }
-}
-
-/* Header och navigeringsstilar */
-header {
-    position: relative;
-    border: 5px solid black;
-    border-radius: 20px;
-    background-color: #088076;
-    color: #abc4bc;
-    padding: 10px 20px;
-}
-
-
-#målgrupp {
-    width: 200px;
-    height: 120px;
-    float: inline-end;
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-nav li {
-    display: inline;
-    text-decoration: none;
-    padding: 0.6rem;
-    background-color: #088076;
-    color: #abc4bc;
-}
-
-/* cute box */
-.cute-box {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 20px; 
-    background-color: #7a64db; 
-    color: #fff; 
-    text-decoration: none;
-    font-weight: bold;
-    border: 2px solid #ff69b4;
-    transition: transform 0.2s ease; 
-}
-
-.cute-box:hover {
-    transform: scale(1.05); 
-    background-color: #ff69b4; 
-    border-color: #7a64db; 
-}
-
 
 /* Klass för zoom-effekt */
 .click-zoom input[type=checkbox] {
@@ -165,32 +141,28 @@ nav li {
     cursor: zoom-out;
 }
 
-/* Grundläggande layoutstilar för body */
-body {
-    max-width: 800px;
-    margin: auto;
-    border-bottom: 80px;
-    min-height: 30vh;
-    display: flex;
-    flex-direction: column;
-}
-
 /* Klass för listor */
 li {
     list-style-type: none;
 }
 
-/* Sidornas bakgrundsfärger */
-.body1 {
-    background-color: rgb(157, 175, 175);
+/* cute box */
+.cute-box {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #7a64db;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #ff69b4;
+    transition: transform 0.2s ease;
 }
 
-.body2 {
-    background-color: rgba(99, 84, 84, 0.605);
-}
-
-.body3 {
-    background-color: thistle;
+.cute-box:hover {
+    transform: scale(1.05);
+    background-color: #ff69b4;
+    border-color: #7a64db;
 }
 
 /* Stilar för specifika ID-element */
@@ -198,4 +170,32 @@ li {
 #Courtesy,
 #Lokal {
     width: 300px;
+}
+
+#Layoutpic {
+    background-image: url(bilder/flexboxs.jpg);
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;  
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu {
+        float: none;
+        margin-top: 20px;
+    }
+}
+
+/* Media query för ännu mindre skärmar */
+@media only screen and (max-width: 480px) {
+    .item {
+        font-size: 14px; 
+    }
 }
